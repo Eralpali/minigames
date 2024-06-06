@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+	font-family: "Jersey 10", sans-serif;
+}
+
+
+
+.container {
+	height: 100vh;
+	background: rgba(38, 70, 83, 1.0);
+	background-size: 100%, 100%;
+	display: flex;
+	position: relative;
+}
+
+.container .ustPanel {
+	width: 100%;
+	height: 80px; /* Yüksekliği otomatik genişleyecek şekilde ayarla */
+	display: flex;
+	justify-content: left; /* İçeriği yatayda sola hizala */
+	align-items: center; /* İçeriği dikeyde ortala */
+	background-color: rgba(233, 196, 106, 0.7); /* Hafif saydam bir arka plan rengi */
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Hafif bir gölge */
+}
+
+.container .ustPanel p a{
+	margin-top: 12px;
+	margin-left: 40px;
+	text-align: center;
+	font-size: 60px;
+	color: #FF851B; /* Değişiklik: Renk turuncu olarak ayarlandı */
+	transition: color 0.3s;
+}
+
+.container .ustPanel p a:hover {
+	color: #E83E8C; /* Değişiklik: Hover durumunda farklı bir renk */
+}
+
+
+.container .anaMenu{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 40%;
+	height: 70%;
+	background: rgb(189, 73, 43, 1.0);
+	margin-top: 2%;
+	display: flex; /* Öğeleri yatayda düzenle */
+	align-items: center; /* Öğeleri dikeyde ortala */
+	justify-content: center;
+}
+
+.container .anaMenu ul li{
+	width: 125px;
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 20px;
+	padding: 40px;
+	background-color: #E83E8C; /* Değişiklik: Buton arka plan rengi */
+	transition: transform 0.3s ease; /* Geçiş efekti */
+	border-radius: 10px;
+	line-height: 1px;
+	border: 2px solid rgba(38, 70, 83, 1.0);
+}
+
+
+
+.container .anaMenu ul li a{
+	color: #FFFFFF;
+	
+}
+
+.container .anaMenu ul li:hover{
+	transform: scale(1.1);
+	background: rgba(0, 48, 73);
+	-webkit-transform: scale(1.2);
+	border-width: 3px; /* Hover durumunda border kalınlığını artır */
+	color: #FFFFFF;
+	border-color: #E83E8C;
+}
+
+
+.container .content-box{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 600px;
+	height: 400px;
+	background: rgb(189, 73, 43, 1.0);
+	margin-top: 2%;
+	display: flex; /* Öğeleri yatayda düzenle */
+	justify-content: center; /* Öğeler arasında eşit boşluk bırak */
+	align-items: center; /* Öğeleri dikeyde ortala */
+}
+
+.header {
+	position: absolute;
+	top: 0; /* Header'ın üst kısmına ayarla */
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	text-align: center;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.header h2 {
+	color: #FFA500; /* Turuncu */
+	font-size: 48px;
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Gölgelendirme */
+}
+
+
+.content-hakkimizda {
+	position: relative;
+	top: 30%;
+	margin-top: 35px;
+	left: 40%;
+	transform: translate(-50%, -30%);
+	width: 80%;
+	text-align: left;
+	color: #F4A261; /* İçerik metin rengi */
+	font-size: 23px;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-weight: bold;
+}
+
+.content-hakkimizda p{
+	color: #F4A261; /* İçerik metin rengi */
+	font-size: 25px;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+
+}
+
+.content-bagis {
+	position: fixed;
+	top: 30%;
+	margin-top: 35px;
+	left: 50%;
+	transform: translate(-50%, -30%);
+	width: 90%;
+	text-align: left;
+	color: #F4A261; /* İçerik metin rengi */
+	font-size: 23px;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-weight: bold;
+}
+
+.content-bagis p {
+	color: #F4A261; /* İçerik metin rengi */
+	font-size: 32px;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+
+.container .oyun-content-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 60%;
+	height: 70%;
+	background: rgb(189, 73, 43, 1.0);
+	margin-top: 2%;
+	display: flex; /* Öğeleri yatayda düzenle */
+	align-items: center; /* Öğeleri dikeyde ortala */
+	justify-content: center;
+}
+
+.oyun-container {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	max-height: calc(100% - 150px); /* Maksimum yükseklik belirleniyor */
+	width: 100vh;
+	overflow-y: auto; /* İçeriği aşan kısımlar için kaydırma çubuğu eklenecek */
+}
+
+.oyun-row {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px; /* Satırlar arasında boşluk bırakmak için */
+	margin-left: 30px;
+	margin-right: 45px;
+	padding-top: 10px;
+
+}
+
+.oyun-box {
+	width: 30%;
+	height: 100px;
+	background-color: #E83E8C; /* Değişiklik: Buton arka plan rengi */
+	margin: 10px;
+	color: rgb(0, 48, 73);
+	transition: transform 0.3s ease; /* Geçiş efekti */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer; /* Fare imleci şeklini değiştir */
+	border-radius: 10px; /* Köşeleri yuvarla */
+	border: 2px solid rgba(38, 70, 83, 1.0);
+	line-height: 1px;
+	font-size: 30px;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	
+}
+
+.oyun-box a {
+	text-decoration: none; /* Bağlantı alt çizgisini kaldır */
+	color: rgb(0, 48, 73); /* Bağlantı metin rengi */
+	font-size: 30px;
+	font-family: "Rhodium Libre", serif;
+}
+
+.oyun-box:hover {
+	transform: scale(1.1);/* Mouse üzerine gelindiğinde büyüme efekti */
+	background: rgba(0, 48, 73);
+	-webkit-transform: scale(1.4);
+	border-width: 3px; /* Hover durumunda border kalınlığını artır */
+	color: #FFFFFF;
+	transform: scale(1.25); 
+	border-color: #E83E8C; /* Mouse üzerine gelindiğinde kenarlık rengi değiştir */
+}
+
+/* Kaydırma çubuğu stili */
+.oyun-container::-webkit-scrollbar {
+	width: 10px; /* Kaydırma çubuğu genişliği */
+}
+
+/* Kaydırma çubuğu track (izleme alanı) */
+.oyun-container::-webkit-scrollbar-track {
+	background: rgba(241, 241, 241, 0.2); /* Track arkaplan rengi */
+	border-radius: 20px;
+}
+
+/* Kaydırma çubuğu thumb (kaydırma başlığı) */
+.oyun-container::-webkit-scrollbar-thumb {
+	background: #888; /* Kaydırma başlığı rengi */
+	border-radius: 5px; /* Köşe yuvarlama */
+}
+
+/* Kaydırma çubuğu thumb hover (üzerine gelindiğinde) */
+.oyun-container::-webkit-scrollbar-thumb:hover {
+	background: #555; /* Hover durumunda renk değiştirme */
+}
